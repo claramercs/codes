@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Page 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://static01.nytimes.com/newsgraphics/2023-04-24-learning-loss/bbcf3d3ab4ccde79f660884025629886da891760/_assets/REVISED--3.gif');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid #087504;
+            border-radius: 10px;
+            
+          
+            
+        }
+
+        
+        h2 {
+            font-size: 35px;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        .question {
+            margin-bottom: 20px;
+            font-family: cursive;
+            font-size: 18px;
+            
+        }
+
+       
+        .question label {
+            font-size: 25px;
+            color: #000000;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .question select {
+            margin-top: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Quiz - Page 2</h2>
+
+        <div class="question">
+            <label for="q4">4. What is your college theme color?</label>
+            <select id="q4" name="q4" required>
+                <option value="">Select an option</option>
+                <option value="Red">Red</option>
+                <option value="Orange">Orange</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green">Green</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="q5">5. What is the nickname of every students under your college?</label>
+            <input type="radio" id="q5a" name="q5" value="Python" required> Python<br>
+            <input type="radio" id="q5b" name="q5" value="Panda"> Panda<br>
+            <input type="radio" id="q5c" name="q5" value="Wolf"> Wolf<br>
+            <input type="radio" id="q5d" name="q5" value="Tiger"> Tiger
+        </div>
+
+        <div class="question">
+            <label for="q6"> 6. What is your Program? <p style="font-size: small;"> e.g: BS Information Technology </p> </label>
+            <input type="text" id="q6" name="q6" required>
+        </div>
+
+        <div class="navigation">
+            <a href="ques1.html" class="nav-btn">Back</a>
+            <a href="ques3.html" class="nav-btn">Next</a>
+        </div>
+    </div>
+</body>
+</html>

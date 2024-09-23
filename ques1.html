@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Page 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://static01.nytimes.com/newsgraphics/2023-04-24-learning-loss/bbcf3d3ab4ccde79f660884025629886da891760/_assets/REVISED--3.gif');
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid #087504;
+            border-radius: 10px;
+          
+            
+        }
+
+        h2 {
+            font-size: 35px;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        .question {
+            margin-bottom: 20px;
+            font-family: cursive;
+            font-size: 18px;
+            
+        }
+
+        .question label {
+            font-size: 25px;
+            color: #000000;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .question input[type="radio"], 
+        .question input[type="checkbox"], 
+        .question input[type="text"],
+        .question select {
+            margin-top: 5px;
+            
+        
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Quiz - Page 1</h2>
+
+        <div class="question">
+            <label for="q1">1. What is the name of your school?</label>
+            <input type="radio" id="q1a" name="q1" value="University of St. La Salle" required> University of St. La Salle <br>
+            <input type="radio" id="q1b" name="q1" value="University of La Salle"> University of La Salle <br>
+            <input type="radio" id="q1c" name="q1" value="University of Salle"> University of Salle <br>
+            <input type="radio" id="q1d" name="q1" value="University of St."> University of St.
+        </div>
+
+        <div class="question">
+            <label for="q2">2. From what college department are you? (Select 2 that apply)</label>
+            <input type="checkbox" id="q2a" name="q2" value="Engineering"> Engineering <br>
+            <input type="checkbox" id="q2b" name="q2" value="and Technology"> and Technology <br>
+            <input type="checkbox" id="q2c" name="q2" value="and Computing Studies"> and Computing Studies <br>
+            <input type="checkbox" id="q2d" name="q2" value="Aeronautical"> Aeronautical
+        </div>
+
+        <div class="question">
+            <label for="q3">3. Your college council power-word for this SY2024-2025 is?</label>
+            <input type="text" id="q3" name="q3" required>
+        </div>
+
+        <div class="navigation">
+            <a href="quiz.html" class="nav-btn">Back to Start</a>
+            <a href="ques2.html" class="nav-btn">Next</a>
+        </div>
+    </div>
+</body>
+</html>

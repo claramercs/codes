@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://www.chetu.com/img/blogs/disruptive-technology-in-education/disruptive-technology-in-education-hero-shot.jpg'); 
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 30%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(16, 255, 115, 0.418);
+            border: 5px solid #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .results {
+            margin-bottom: 20px;
+        }
+
+        .results .question {
+            margin-bottom: 15px;
+        }
+
+        .summary {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #d10909;
+            font-weight: bold;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Quiz Results</h2>
+
+        <div class="results"> 
+        </div>
+
+        <div class="summary">
+            Your Score: <span id="score"></span> out of 10
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="nav-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "University of St. La Salle",
+            q2: ["Engineering", "and Technology"],
+            q3: "Transcendix",
+            q4: "Green",
+            q5: "Python",
+            q6: "BS Information Technology",
+            q7: "Hello!",
+            q8: "Yes! &#128540",
+            q9: "Green",
+            q10: "Animo"
+        };
+
+        const userAnswers = {
+            q1: localStorage.getItem('q1'),
+            q2: localStorage.getItem('q2') ? localStorage.getItem('q2').split(',') : [],
+            q3: localStorage.getItem('q3'),
+            q4: localStorage.getItem('q4'),
+            q5: localStorage.getItem('q5'),
+            q6: localStorage.getItem('q6'),
+            q7: localStorage.getItem('q7'),
+            q8: localStorage.getItem('q8'),
+            q9: localStorage.getItem('q9'),
+            q10: localStorage.getItem('q10')
+        };
+
+        let score = 0;
+
+        function checkAnswer(question, correctAnswer) {
+            if (Array.isArray(correctAnswer)) {
+                return correctAnswer.every(answer => userAnswers[question].includes(answer));
+            } else {
+                return userAnswers[question] === correctAnswer;
+            }
+        }
+
+        const resultsDiv = document.querySelector('.results');
+        for (const question in correctAnswers) {
+            const isCorrect = checkAnswer(question, correctAnswers[question]);
+            if (isCorrect) score++;
+
+            const resultHTML = `
+                <div class="question">
+                    <label>Question ${question.slice(1)}:</label>
+                    <p>Your Answer: <strong>${userAnswers[question]}</strong></p>
+                    <p>Correct Answer: <strong>${Array.isArray(correctAnswers[question]) ? correctAnswers[question].join(', ') : correctAnswers[question]}</strong></p>
+                </div>
+            `;
+            resultsDiv.insertAdjacentHTML('beforeend', resultHTML);
+        }
+
+        document.getElementById('score').innerText = `${score}/10`;
+    </script>
+</body>
+</html>

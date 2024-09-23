@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Page 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://static01.nytimes.com/newsgraphics/2023-04-24-learning-loss/bbcf3d3ab4ccde79f660884025629886da891760/_assets/REVISED--3.gif');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid #087504;
+            border-radius: 10px;
+            
+          
+            
+        }
+
+       
+        h2 {
+            font-size: 35px;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+
+        .question {
+            margin-bottom: 20px;
+            font-family: cursive;
+            font-size: 18px;
+            
+        }
+
+        .question label {
+            font-size: 25px;
+            color: #000000;
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+
+        .question select {
+            margin-top: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Quiz - Page 3</h2>
+
+        <div class="question">
+            <label for="q7">7. Hi!</label>
+            <select id="q7" name="q7" required>
+                <option value="">Select an option</option>
+                <option value="Red">Hello!</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="q8">8. Are you happy? </label>
+            <input type="radio" id="q8a" name="q8" value="No &#128542" required> No &#128542 <br>
+            <input type="radio" id="q8b" name="q8" value="Yes! &#128540"> Yes! &#128540 <br>
+        </div>
+
+        <div class="question">
+            <label for="q9">9. We bleed?</label>
+            <select id="q9" name="q9" required>
+                <option value="">Select an option</option>
+                <option value="Red">Green</option>
+                <option value="Orange">Orange</option>
+                <option value="Yellow">Blue</option>
+                <option value="Green">Red</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="q10"> 10. Animo? </label>
+            <input type="text" id="q10" name="q10" required>
+        </div>
+
+        <div class="navigation">
+            <a href="ques2" class="nav-btn">Back</a>
+            <a href="result.html" class="nav-btn">Next</a>
+        </div>
+
+    </div>
+</body>
+</html>

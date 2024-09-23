@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/c4/cf/5e/c4cf5e0bf4e68ec4df02bd80e03930fe.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container1 {
+            width: 30%;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #28A745;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .name {
+            margin: 0;
+            padding-bottom: 6rem;
+            font-family: fantasy;
+            font-weight: bold;
+            color: #3bf566;;
+            font-size: 5rem;
+            text-transform:uppercase;
+            animation: glow 2s ease-in-out infinite alternate;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+            text-shadow: 0 0 20px #00ff26;
+            }
+            to {
+            text-shadow: 0 0 30px , 0 0 10px #002aff;
+        }
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .start-btn {
+            font-size: 18px;
+            color: #28A745;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            border: 2px solid #28A745;
+        }
+
+        .start-btn:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+    </style>
+
+    <div class="name">
+        <h2>Lasallian Quiz!</h2>
+    </div>
+
+    <div class="container1">
+        <p>Test your knowledge by answering 10 questions.</p>
+        <p style="text-align:center;">Enjoy! <br> </br> </p>
+        <a href="quizpage1.html" class="start-btn">Start Quiz</a>
+    </div>
+</body>
+</html>
